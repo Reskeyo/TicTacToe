@@ -2,80 +2,95 @@
 {
     internal class Program
     {
-        
+
         static int playerCharId;
 
-        static bool gameOver = false;
-        static Spielfeld spielfeld = new Spielfeld();
-
+        static bool gameOver;
+        static Spielfeld spielfeld;
 
         static void Main(string[] args)
         {
-            Bot bot = null;
+            bool playAgain = true;
 
-            Console.WriteLine("Wähle deinen Spielstein (X oder O): ");
-            string input = Console.ReadLine();
-            if (input == "X" || input == "O")
+            while (playAgain)
             {
-                playerCharId = (char.Parse(input) == 'X' ? 1 : 2);
-                bot = new Bot(playerCharId == 1 ? 2 : 1);
-            }
-            else
-            {
-                Console.WriteLine("Ungültige Eingabe. Bitte wähle X oder O.");
-                Main(args);
-            }
+                gameOver = false;
 
-            while (!gameOver)
-            {
-                Console.WriteLine("Gib eine Position ein (z.B. 11): ");
-                string position = Console.ReadLine();
-                if (position.Length < 2) 
+                spielfeld = new Spielfeld();
+                Bot bot = null;
+
+                Console.WriteLine("Wähle deinen Spielstein (X oder O): ");
+                string input = Console.ReadLine();
+                if (input == "X" || input == "O")
                 {
-                    Console.WriteLine("Falsche Eingabe! Zulässig: 11, 12, ... , 32, 33  ");
-                    continue; 
-                }
-
-                int[] pos = { Convert.ToInt16(position[0].ToString()) - 1, Convert.ToInt16(position[1].ToString()) - 1 };
-
-                if (pos[0] < 0 || pos[0] > 2 || pos[1] < 0 || pos[1] > 2)
-                {
-                    Console.WriteLine("Ungültige Position. Bitte wähle eine Position zwischen 11 und 33.");
-                    continue;
-                }
-
-                if (spielfeld[pos[0], pos[1]] == 0)
-                {
-                    spielfeld[pos[0], pos[1]] = playerCharId;
+                    playerCharId = (char.Parse(input) == 'X' ? 1 : 2);
+                    bot = new Bot(playerCharId == 1 ? 2 : 1);
                 }
                 else
                 {
-                    Console.WriteLine("Diese Position ist bereits belegt. Wähle eine andere Position.");
-                    continue;
+                    Console.WriteLine("Ungültige Eingabe. Bitte wähle X oder O.");
+                    Main(args);
                 }
 
-
-                spielfeld.DrawSpielfeld();
-                CheckWin();
-                if (gameOver)
+                while (!gameOver)
                 {
-                    break;
+                    Console.WriteLine("Gib eine Position ein (z.B. 11): ");
+                    string position = Console.ReadLine();
+                    if (position.Length < 2)
+                    {
+                        Console.WriteLine("Falsche Eingabe! Zulässig: 11, 12, ... , 32, 33  ");
+                        continue;
+                    }
+
+                    int[] pos = { Convert.ToInt16(position[0].ToString()) - 1, Convert.ToInt16(position[1].ToString()) - 1 };
+
+                    if (pos[0] < 0 || pos[0] > 2 || pos[1] < 0 || pos[1] > 2)
+                    {
+                        Console.WriteLine("Ungültige Position. Bitte wähle eine Position zwischen 11 und 33.");
+                        continue;
+                    }
+
+                    if (spielfeld[pos[0], pos[1]] == 0)
+                    {
+                        spielfeld[pos[0], pos[1]] = playerCharId;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Diese Position ist bereits belegt. Wähle eine andere Position.");
+                        continue;
+                    }
+
+
+                    spielfeld.DrawSpielfeld();
+                    CheckWin();
+                    if (gameOver)
+                    {
+                        PlayAgain(playAgain);
+                        break;
+                    }
+
+                    Console.WriteLine("Bot ist am Zug.");
+                    bot.zugSpielen(spielfeld);
+
+
+                    spielfeld.DrawSpielfeld();
+                    CheckWin();
+                    if (gameOver)
+                    {
+                        PlayAgain(playAgain);
+                        break;
+                    }
+
                 }
-
-                Console.WriteLine("Bot ist am Zug.");
-                bot.zugSpielen(spielfeld);
-
-
-                spielfeld.DrawSpielfeld();
-                CheckWin();
-                if (gameOver)
-                {
-                    break;
-                }
-
             }
         }
 
+        static void PlayAgain(bool playAgain)
+        {
+            Console.Write("Weiter spielen? (y/n):\t");
+            if (Console.ReadLine() == "y") { playAgain = true; }
+            else { playAgain = false; }
+        }
 
         static void CheckWin()
         {
@@ -131,10 +146,6 @@
                 Console.WriteLine("Das Spiel ist unentschieden!");
             }
         }
-
-        
-
-        
 
         static char GetPlayerChar(int playerCharId)
         {
