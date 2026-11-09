@@ -1,12 +1,12 @@
-﻿namespace TicTacToe2
+namespace TicTacToe2
 {
-    internal class Program
+    public class Program
     {
 
         static int playerCharId;
 
-        static bool gameOver;
-        static Spielfeld spielfeld;
+        public static bool gameOver;
+        public static Spielfeld spielfeld;
 
         static void Main(string[] args)
         {
@@ -30,6 +30,13 @@
                 {
                     Console.WriteLine("Ungültige Eingabe. Bitte wähle X oder O.");
                     Main(args);
+                }
+
+                if (playerCharId == 2) // 2 steht für 'O'
+                {
+                    Console.WriteLine("Bot (X) fängt an:");
+                    bot.zugSpielen(spielfeld);
+                    spielfeld.DrawSpielfeld();
                 }
 
                 while (!gameOver)
@@ -65,7 +72,7 @@
                     CheckWin();
                     if (gameOver)
                     {
-                        PlayAgain(playAgain);
+                        playAgain = PlayAgain();
                         break;
                     }
 
@@ -77,7 +84,7 @@
                     CheckWin();
                     if (gameOver)
                     {
-                        PlayAgain(playAgain);
+                        playAgain = PlayAgain();
                         break;
                     }
 
@@ -85,14 +92,13 @@
             }
         }
 
-        static void PlayAgain(bool playAgain)
+        static bool PlayAgain()
         {
             Console.Write("Weiter spielen? (y/n):\t");
-            if (Console.ReadLine() == "y") { playAgain = true; }
-            else { playAgain = false; }
+            return Console.ReadLine() == "y";
         }
 
-        static void CheckWin()
+        public static void CheckWin()
         {
             // Überprüfen der Zeilen
             for (int i = 0; i < 3; i++)

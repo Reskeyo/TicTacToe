@@ -4,7 +4,7 @@ using System.Text;
 
 namespace TicTacToe2
 {
-    internal class Spielfeld
+    public class Spielfeld
     {
         // 0 = leer, 1 = X, 2 = O 
         public int[,] spielfeldArray = { { 0, 0, 0 }, { 0, 0, 0 }, { 0, 0, 0 } };

@@ -4,13 +4,15 @@ using System.Text;
 
 namespace TicTacToe2
 {
-    internal class Bot
+    public class Bot
     {
-        int botCharId;
+        public int botCharId;
+        public bool useSmartStrat = true;
 
-        public Bot(int botCharId)
+        public Bot(int botCharId, bool useSmartStrat = true)
         {
             this.botCharId = botCharId;
+            this.useSmartStrat = useSmartStrat;
         }
 
         public int[] pickRandomFreePosition(Spielfeld s)
@@ -28,8 +30,11 @@ namespace TicTacToe2
 
         public void zugSpielen(Spielfeld s)
         {
-            int[] pos = pickPosWithAlgo(s);
-            s[pos[0], pos[1]] = botCharId;
+            int[] pos = useSmartStrat ? pickPosWithAlgo(s) : pickRandomFreePosition(s);
+            if (pos != null)
+            {
+                s[pos[0], pos[1]] = botCharId;
+            }
         }
 
 

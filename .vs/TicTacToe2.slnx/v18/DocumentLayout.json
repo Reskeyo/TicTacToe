@@ -3,12 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\Daniel\\source\\repos\\TicTacToe2\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{CFB34E4B-5B65-45D1-8017-A3102D0C10D9}|TicTacToeSimulation\\TicTacToeSimulation.csproj|c:\\users\\daniel\\source\\repos\\tictactoe2\\tictactoesimulation\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CFB34E4B-5B65-45D1-8017-A3102D0C10D9}|TicTacToeSimulation\\TicTacToeSimulation.csproj|solutionrelative:tictactoesimulation\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{CE56685D-17ED-7734-A04D-1B55FB5BEC1F}|TicTacToe2\\TicTacToe2.csproj|c:\\users\\daniel\\source\\repos\\tictactoe2\\tictactoe2\\bot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CE56685D-17ED-7734-A04D-1B55FB5BEC1F}|TicTacToe2\\TicTacToe2.csproj|solutionrelative:tictactoe2\\bot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CE56685D-17ED-7734-A04D-1B55FB5BEC1F}|TicTacToe2\\TicTacToe2.csproj|c:\\users\\daniel\\source\\repos\\tictactoe2\\tictactoe2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CE56685D-17ED-7734-A04D-1B55FB5BEC1F}|TicTacToe2\\TicTacToe2.csproj|solutionrelative:tictactoe2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA7B1294-88C4-44B0-9D21-22C2417880A5}|TicTacToeTests\\TicTacToeTests.csproj|c:\\users\\daniel\\source\\repos\\tictactoe2\\tictactoetests\\bottests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA7B1294-88C4-44B0-9D21-22C2417880A5}|TicTacToeTests\\TicTacToeTests.csproj|solutionrelative:tictactoetests\\bottests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CE56685D-17ED-7734-A04D-1B55FB5BEC1F}|TicTacToe2\\TicTacToe2.csproj|c:\\users\\daniel\\source\\repos\\tictactoe2\\tictactoe2\\spielfeld.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -22,11 +30,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Daniel\\source\\repos\\TicTacToe2\\TicTacToeSimulation\\Program.cs",
+              "RelativeDocumentMoniker": "TicTacToeSimulation\\Program.cs",
+              "ToolTip": "C:\\Users\\Daniel\\source\\repos\\TicTacToe2\\TicTacToeSimulation\\Program.cs",
+              "RelativeToolTip": "TicTacToeSimulation\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-09T18:50:25.8Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "BotTests.cs",
+              "DocumentMoniker": "C:\\Users\\Daniel\\source\\repos\\TicTacToe2\\TicTacToeTests\\BotTests.cs",
+              "RelativeDocumentMoniker": "TicTacToeTests\\BotTests.cs",
+              "ToolTip": "C:\\Users\\Daniel\\source\\repos\\TicTacToe2\\TicTacToeTests\\BotTests.cs",
+              "RelativeToolTip": "TicTacToeTests\\BotTests.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-09T18:37:53.657Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Spielfeld.cs",
               "DocumentMoniker": "C:\\Users\\Daniel\\source\\repos\\TicTacToe2\\TicTacToe2\\Spielfeld.cs",
               "RelativeDocumentMoniker": "TicTacToe2\\Spielfeld.cs",
@@ -39,26 +73,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Bot.cs",
               "DocumentMoniker": "C:\\Users\\Daniel\\source\\repos\\TicTacToe2\\TicTacToe2\\Bot.cs",
               "RelativeDocumentMoniker": "TicTacToe2\\Bot.cs",
               "ToolTip": "C:\\Users\\Daniel\\source\\repos\\TicTacToe2\\TicTacToe2\\Bot.cs",
               "RelativeToolTip": "TicTacToe2\\Bot.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAEwEYAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-11-08T16:10:08.256Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Daniel\\source\\repos\\TicTacToe2\\TicTacToe2\\Program.cs",
               "RelativeDocumentMoniker": "TicTacToe2\\Program.cs",
               "ToolTip": "C:\\Users\\Daniel\\source\\repos\\TicTacToe2\\TicTacToe2\\Program.cs",
               "RelativeToolTip": "TicTacToe2\\Program.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAxwBAAAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFYAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-11-08T12:41:30.588Z",
               "EditorCaption": ""

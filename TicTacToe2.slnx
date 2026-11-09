@@ -1,3 +1,5 @@
 <Solution>
   <Project Path="TicTacToe2/TicTacToe2.csproj" />
+  <Project Path="TicTacToeSimulation/TicTacToeSimulation.csproj" Id="cfb34e4b-5b65-45d1-8017-a3102d0c10d9" />
+  <Project Path="TicTacToeTests/TicTacToeTests.csproj" Id="fa7b1294-88c4-44b0-9d21-22c2417880a5" />
 </Solution>
