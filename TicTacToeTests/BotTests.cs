@@ -104,7 +104,7 @@ namespace TicTacToeTests
         public void ZufallsBot_SetztGenauEinenStein()
         {
             Spielfeld feld = new Spielfeld();
-            Bot bot = new Bot(1);
+            Bot bot = new Bot(1, false);
 
             int freieFelderVorher = feld.getFreePositions().Count; // 9
 
